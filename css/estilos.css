@@ -109,11 +109,25 @@ section.full-screen{ /*Comportamiento para la seccion de contacto*/
 }
 
 section.about .empty { /*Seleccion de la etiqueta section con classe aboout y los hijos con clase empy*/
+	display: flex;
 	background-color: #e5e5e5;
 	border-radius: var(--variable-radius);
-	flex-basis: 37.5vw; /*Ancho Base del elemento*/
+	align-items: flex-end;
+	flex-basis: 45vw; /*Ancho Base del elemento*/
 	transition: flex-basis 0.8s cubic-bezier(.14,.52,.13,.99);
 	will-change: flex-basis;
+	justify-content: space-evenly;
+}
+
+figure.avatar {
+	padding: var(--padding-services);
+	display: flex;
+	justify-content: center;
+	padding-bottom: 0px;
+	margin-bottom: 0px;
+} 
+img.avatar{
+	width: 100%;
 }
 
 section.about article{ /*Div de los articulos*/
@@ -274,6 +288,18 @@ section.contact	a:hover{
 
 	h2{
 		font-size:25px;
+	}
+
+	img.avatar{
+		width: 50%;
+	}
+
+	section.about {
+		flex-direction: column;
+	}
+
+	section.about article .title{
+		padding: 7vw 6.25vw;
 	}
 
 	section.services {
