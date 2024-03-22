@@ -25,7 +25,7 @@ html, body {
 	--variable-radius: 100px;
 	--padding-services: 3.125vw 6.25vw;
 	--azul: #1d47fe; 
-	--moradoClaro: #d5a3fa;
+	--moradoClaro: #dcb2fd;
 	--verdeLima: #d0ff94; 
 	/*Eliminar los bordes que se generan automaticamente, es para que los contenedores llenen el 100% e la pagina.*/
 	margin: 0px;
@@ -214,30 +214,30 @@ section.services .text a{
 
 /*Services Sections Anular*/
 
-section.services.services-html figure{
-	background-color: var(--verdeLima);
-}
-
-section.services.services-css figure{
+section.services.services-3D figure{
 	background-color: var(--azul);
 }
 
-section.services.services-js figure{
+section.services.services-motion figure{
+	background-color: #e5e5e5;
+}
+
+section.services.services-web figure{
 	background-color: var(--moradoClaro);
 }
 
-section.services.services-html .text h2, 
-section.services.services-html .text a{
+section.services.services-3D .text h2, 
+section.services.services-3D .text a{
 	color:var(--moradoClaro);
 }
 
-section.services.services-css .text h2, 
-section.services.services-css .text a{
-	color:var(--verdeLima);
+section.services.services-motion .text h2, 
+section.services.services-motion .text a{
+	color: #F34726;
 }
 
-section.services.services-js .text h2, 
-section.services.services-js .text a{
+section.services.services-web .text h2, 
+section.services.services-web .text a{
 	color:#4e6fff;
 }
 
@@ -245,7 +245,7 @@ section.services.services-js .text a{
 section.contact{
 	align-items: center;
 	justify-content: center;
-	background: linear-gradient(var(--azul), var(--verdeLima) 40%,var(--moradoClaro) 80%, #e5e5e5);
+	background: linear-gradient(var(--azul), 50%,var(--moradoClaro) 80%, #e5e5e5);
 	border-radius: var(--variable-radius);
 	padding: 0;
 }
@@ -274,6 +274,10 @@ section.contact	a:hover{
 @media only screen and (max-width: 768px) {
 	html,body{
 		--variable-radius: 50px;
+		font-size: 18px;
+	}
+
+	nav {
 		font-size: 18px;
 	}
 
