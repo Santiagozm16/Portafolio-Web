@@ -76,6 +76,8 @@ nav ul li a{
 	color: white;
 	font-family: "Space Mono", monospace;
 	text-decoration: none;
+	cursor:pointer;
+	user-select: none; 
 	transition: border-bottom 0.1s ease-in;
 }
 
@@ -84,6 +86,57 @@ nav ul li a:hover{
 }
 
 /*Estilos de la sección*/
+.menu{
+	background-color: black;
+	display: none;
+	list-style: none;
+	position: fixed;
+	z-index: 3;
+	top: 25px;
+	left: 90px;
+	animation: desplegarMenu 0.5s forwards; /* Aplicamos la animación desplegarMenu */
+    transform-origin: top; /* Establecemos el punto de origen en la parte superior */
+
+}
+
+@keyframes desplegarMenu {
+    0% {
+        transform: scaleY(0); /* Empezamos desde 0 en la escala Y */
+    }
+    100% {
+        transform: scaleY(1); /* Llegamos a la escala Y completa */
+    }
+}
+
+@keyframes cerrarMenu {
+    0% {
+        transform: scaleY(1); /* Empezamos desde 0 en la escala Y */
+    }
+    100% {
+        transform: scaleY(0); /* Llegamos a la escala Y completa */
+        display: none;
+    }
+}
+
+.menu ul{
+	padding: 0px;
+}
+
+.menu li{
+	margin: 8px 10px;
+}
+
+.menu li a{
+	color: white;
+	font-family: "Space Mono", monospace;
+	text-decoration: none;
+	transition: border-bottom 0.1s ease-in;
+
+}
+
+.menu li a:hover{
+	border-bottom: 2px solid white;
+}
 
 section {
 	position:relative; /*Es para mover la sección completa hacia abajo*/
@@ -281,6 +334,9 @@ section.contact	a:hover{
 		font-size: 18px;
 	}
 
+	.menu {
+		left: 65px;
+	}
 	nav ul li{
 		margin-left: 25px; /*Se cambia esta propiedad para disminuir el espacio que hay entr los objetos de la lista, recordar que
 		la lista es un elemento flex.*/
